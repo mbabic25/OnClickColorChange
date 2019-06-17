@@ -24,6 +24,7 @@
 }
 .button {
   cursor: pointer;
+  border: 1px solid;
 }
 .previous-text-color-text {
   margin-top: 20px;
@@ -32,6 +33,13 @@
 }
 .color-text {
   font-size: 16px;
+}
+.input-field {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 180px;
+  font-size: 16px;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
