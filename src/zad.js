@@ -5,14 +5,12 @@ class Zadatak extends Component {
     colors: ["#000000"],
     value: ""
   };
-  getUserAsync = async () => {
+  getColorsAsync = async () => {
     let response = await fetch(`http://www.colr.org/json/color/random`);
     let data = await response.json();
     let newColor = data.new_color;
     if (newColor)
       this.setState({ colors: [`#${newColor}`, ...this.state.colors] });
-    console.log("data", data);
-    console.log("new state", this.state.colors);
   };
   handleChange = event => {
     this.setState({ value: event.target.value });
@@ -32,7 +30,7 @@ class Zadatak extends Component {
         <div
           className="button"
           style={{ color: lastColor }}
-          onClick={this.getUserAsync}
+          onClick={this.getColorsAsync}
         >
           {this.state.value ? this.state.value : "CLICK ME"}
         </div>
